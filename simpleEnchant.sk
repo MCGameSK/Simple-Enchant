@@ -1,0 +1,791 @@
+#
+#Github https://github.com/MCGameSK/Simple-Enchant
+#
+
+
+
+import:
+    org.bukkit.inventory.ItemFlag
+
+
+
+options:
+    ChanceSuccess: 50
+
+    MaxLvSharpness: 10
+    MaxLvSmite: 8
+    MaxLvBaneOfArthropods: 8
+    MaxLvLooting: 5
+    MaxLvKnockback: 10
+    MaxLvPower: 10
+    MaxLvPunch: 10
+    MaxLvRiptide: 10
+    MaxLvQuickCharge: 5
+    MaxLvUnbreaking: 10
+    MaxLvMending: 1
+    MaxLvProtection: 10
+    MaxLvFeatherFalling: 5
+    MaxLvEfficiency: 8
+    MaxLvFortune: 5
+    MaxLvLure: 5
+    MaxLvLuckOfTheSea: 10
+
+    BooksTag: 704031
+
+
+
+on load:
+    set {enchantBooks::sharpness} to book of unbreaking named "&dEnchantment &e[ Sharpness ]" with lore "&f&r " and "&cChance &7&o%"{@ChanceSuccess}"% / 100" and "&3MaxLV &7&o%"{@MaxLvSharpness}"% lv" and "&c&r " and "&8Book in main hand, " and "&8Target in offhand, Swap key to execute it" and "&r "
+    set {enchantBooks::smite} to book of unbreaking named "&dEnchantment &e[ Smite ]" with lore "&f&r " and "&cChance &7&o%"{@ChanceSuccess}"% / 100" and "&3MaxLV &7&o%"{@MaxLvSmite}"% lv" and "&c&r " and "&8Book in main hand, " and "&8Target in offhand, Swap key to execute it" and "&r "
+    set {enchantBooks::baneOfArthropods} to book of unbreaking named "&dEnchantment &e[ Bane Of Arthropods ]" with lore "&f&r " and "&cChance &7&o%"{@ChanceSuccess}"% / 100" and "&3MaxLV &7&o%"{@MaxLvBaneOfArthropods}"% lv" and "&c&r " and "&8Book in main hand, " and "&8Target in offhand, Swap key to execute it" and "&r "
+    set {enchantBooks::looting} to book of unbreaking named "&dEnchantment &e[ Looting ]" with lore "&f&r " and "&cChance &7&o%"{@ChanceSuccess}"% / 100" and "&3MaxLV &7&o%"{@MaxLvLooting}"% lv" and "&c&r " and "&8Book in main hand, " and "&8Target in offhand, Swap key to execute it" and "&r "
+    set {enchantBooks::knockback} to book of unbreaking named "&dEnchantment &e[ Knockback ]" with lore "&f&r " and "&cChance &7&o%"{@ChanceSuccess}"% / 100" and "&3MaxLV &7&o%"{@MaxLvKnockback}"% lv" and "&c&r " and "&8Book in main hand, " and "&8Target in offhand, Swap key to execute it" and "&r "
+    set {enchantBooks::power} to book of unbreaking named "&dEnchantment &e[ Power ]" with lore "&f&r " and "&cChance &7&o%"{@ChanceSuccess}"% / 100" and "&3MaxLV &7&o%"{@MaxLvPower}"% lv" and "&c&r " and "&8Book in main hand, " and "&8Target in offhand, Swap key to execute it" and "&r "
+    set {enchantBooks::punch} to book of unbreaking named "&dEnchantment &e[ Punch ]" with lore "&f&r " and "&cChance &7&o%"{@ChanceSuccess}"% / 100" and "&3MaxLV &7&o%"{@MaxLvPunch}"% lv" and "&c&r " and "&8Book in main hand, " and "&8Target in offhand, Swap key to execute it" and "&r "
+    set {enchantBooks::riptide} to book of unbreaking named "&dEnchantment &e[ Riptide ]" with lore "&f&r " and "&cChance &7&o%"{@ChanceSuccess}"% / 100" and "&3MaxLV &7&o%"{@MaxLvRiptide}"% lv" and "&c&r " and "&8Book in main hand, " and "&8Target in offhand, Swap key to execute it" and "&r "
+    set {enchantBooks::quickCharge} to book of unbreaking named "&dEnchantment &e[ Quick Charge ]" with lore "&f&r " and "&cChance &7&o%"{@ChanceSuccess}"% / 100" and "&3MaxLV &7&o%"{@MaxLvQuickCharge}"% lv" and "&c&r " and "&8Book in main hand, " and "&8Target in offhand, Swap key to execute it" and "&r "
+    set {enchantBooks::unbreaking} to book of unbreaking named "&dEnchantment &e[ Unbreaking ]" with lore "&f&r " and "&cChance &7&o%"{@ChanceSuccess}"% / 100" and "&3MaxLV &7&o%"{@MaxLvUnbreaking}"% lv" and "&c&r " and "&8Book in main hand, " and "&8Target in offhand, Swap key to execute it" and "&r "
+    set {enchantBooks::mending} to book of unbreaking named "&dEnchantment &e[ Mending ]" with lore "&f&r " and "&cChance &7&o%"{@ChanceSuccess}"% / 100" and "&3MaxLV &7&o%"{@MaxLvMending}"% lv" and "&c&r " and "&8Book in main hand, " and "&8Target in offhand, Swap key to execute it" and "&r "
+    set {enchantBooks::protection} to book of unbreaking named "&dEnchantment &e[ Protection ]" with lore "&f&r " and "&cChance &7&o%"{@ChanceSuccess}"% / 100" and "&3MaxLV &7&o%"{@MaxLvProtection}"% lv" and "&c&r " and "&8Book in main hand, " and "&8Target in offhand, Swap key to execute it" and "&r "
+    set {enchantBooks::featherFalling} to book of unbreaking named "&dEnchantment &e[ Feather Falling ]" with lore "&f&r " and "&cChance &7&o%"{@ChanceSuccess}"% / 100" and "&3MaxLV &7&o%"{@MaxLvFeatherFalling}"% lv" and "&c&r " and "&8Book in main hand, " and "&8Target in offhand, Swap key to execute it" and "&r "
+    set {enchantBooks::efficiency} to book of unbreaking named "&dEnchantment &e[ Efficiency ]" with lore "&f&r " and "&cChance &7&o%"{@ChanceSuccess}"% / 100" and "&3MaxLV &7&o%"{@MaxLvEfficiency}"% lv" and "&c&r " and "&8Book in main hand, " and "&8Target in offhand, Swap key to execute it" and "&r "
+    set {enchantBooks::fortune} to book of unbreaking named "&dEnchantment &e[ Fortune ]" with lore "&f&r " and "&cChance &7&o%"{@ChanceSuccess}"% / 100" and "&3MaxLV &7&o%"{@MaxLvFortune}"% lv" and "&c&r " and "&8Book in main hand, " and "&8Target in offhand, Swap key to execute it" and "&r "
+    set {enchantBooks::lure} to book of unbreaking named "&dEnchantment &e[ Lure ]" with lore "&f&r " and "&cChance &7&o%"{@ChanceSuccess}"% / 100" and "&3MaxLV &7&o%"{@MaxLvLure}"% lv" and "&c&r " and "&8Book in main hand, " and "&8Target in offhand, Swap key to execute it" and "&r "
+    set {enchantBooks::luckOfTheSea} to book of unbreaking named "&dEnchantment &e[ Luck Of The Sea ]" with lore "&f&r " and "&cChance &7&o%"{@ChanceSuccess}"% / 100" and "&3MaxLV &7&o%"{@MaxLvLuckOfTheSea}"% lv" and "&c&r " and "&8Book in main hand, " and "&8Target in offhand, Swap key to execute it" and "&r "
+
+    loop {enchantBooks::*}:
+        set custom model data of loop-value to {@BooksTag}
+        set {_meta} to loop-value.getItemMeta()
+        {_meta}.addItemFlags([ItemFlag.HIDE_ENCHANTS])
+        loop-value.setItemMeta({_meta})
+
+
+
+on swap hand items with priority highest:
+    if custom model data of 1 of player's tool is {@BooksTag}:
+        if player's offhand tool is not 0 air:
+            cancel event
+
+            if custom model data of 1 of player's offhand tool is {@BooksTag}:
+                message "&cIt's not the right target."
+                exit
+
+            if item amount of player's offhand tool <= 1:
+
+                if chance of {@ChanceSuccess}%:
+                    #
+                    if 1 of player's tool is {enchantBooks::sharpness}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of sharpness of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvSharpness}:
+                            enchant {_tempItem} with "sharpness %{_tempLv} + 1%" parsed as enchantment type
+                            set player's offhand tool to {_tempItem}
+
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&aSuccess! &e&oSharpness ( %enchantment level of sharpness of {_tempItem}% / %"{@MaxLvSharpness}"% )"
+                            play sound "block.anvil.use" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::smite}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of smite of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvSmite}:
+                            enchant {_tempItem} with "smite %{_tempLv} + 1%" parsed as enchantment type
+                            set player's offhand tool to {_tempItem}
+
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&aSuccess! &e&oSmite ( %enchantment level of smite of {_tempItem}% / %"{@MaxLvSmite}"% )"
+                            play sound "block.anvil.use" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::baneOfArthropods}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of bane of arthropods of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvBaneOfArthropods}:
+                            enchant {_tempItem} with "bane of arthropods %{_tempLv} + 1%" parsed as enchantment type
+                            set player's offhand tool to {_tempItem}
+
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&aSuccess! &e&oBane Of Arthropods ( %enchantment level of bane of arthropods of {_tempItem}% / %"{@MaxLvBaneOfArthropods}"% )"
+                            play sound "block.anvil.use" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::looting}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of looting of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvLooting}:
+                            enchant {_tempItem} with "looting %{_tempLv} + 1%" parsed as enchantment type
+                            set player's offhand tool to {_tempItem}
+
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&aSuccess! &e&oLooting ( %enchantment level of looting of {_tempItem}% / %"{@MaxLvLooting}"% )"
+                            play sound "block.anvil.use" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::knockback}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of knockback of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvKnockback}:
+                            enchant {_tempItem} with "knockback %{_tempLv} + 1%" parsed as enchantment type
+                            set player's offhand tool to {_tempItem}
+
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&aSuccess! &e&oKnockback ( %enchantment level of knockback of {_tempItem}% / %"{@MaxLvKnockback}"% )"
+                            play sound "block.anvil.use" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::power}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of power of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvPower}:
+                            enchant {_tempItem} with "power %{_tempLv} + 1%" parsed as enchantment type
+                            set player's offhand tool to {_tempItem}
+
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&aSuccess! &e&oPower ( %enchantment level of power of {_tempItem}% / %"{@MaxLvPower}"% )"
+                            play sound "block.anvil.use" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::punch}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of punch of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvPunch}:
+                            enchant {_tempItem} with "punch %{_tempLv} + 1%" parsed as enchantment type
+                            set player's offhand tool to {_tempItem}
+
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&aSuccess! &e&oPunch ( %enchantment level of punch of {_tempItem}% / %"{@MaxLvPunch}"% )"
+                            play sound "block.anvil.use" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::riptide}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of riptide of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvRiptide}:
+                            enchant {_tempItem} with "riptide %{_tempLv} + 1%" parsed as enchantment type
+                            set player's offhand tool to {_tempItem}
+
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&aSuccess! &e&oRiptide ( %enchantment level of riptide of {_tempItem}% / %"{@MaxLvRiptide}"% )"
+                            play sound "block.anvil.use" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::quickCharge}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of quick charge of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvQuickCharge}:
+                            enchant {_tempItem} with "quick charge %{_tempLv} + 1%" parsed as enchantment type
+                            set player's offhand tool to {_tempItem}
+
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&aSuccess! &e&oQuick Charge ( %enchantment level of quick charge of {_tempItem}% / %"{@MaxLvQuickCharge}"% )"
+                            play sound "block.anvil.use" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::unbreaking}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of unbreaking of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvUnbreaking}:
+                            enchant {_tempItem} with "unbreaking %{_tempLv} + 1%" parsed as enchantment type
+                            set player's offhand tool to {_tempItem}
+
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&aSuccess! &e&oUnbreaking ( %enchantment level of unbreaking of {_tempItem}% / %"{@MaxLvUnbreaking}"% )"
+                            play sound "block.anvil.use" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::mending}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of mending of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvMending}:
+                            enchant {_tempItem} with "mending %{_tempLv} + 1%" parsed as enchantment type
+                            set player's offhand tool to {_tempItem}
+
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&aSuccess! &e&oMending ( %enchantment level of mending of {_tempItem}% / %"{@MaxLvMending}"% )"
+                            play sound "block.anvil.use" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::protection}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of protection of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvProtection}:
+                            enchant {_tempItem} with "protection %{_tempLv} + 1%" parsed as enchantment type
+                            set player's offhand tool to {_tempItem}
+
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&aSuccess! &e&oProtection ( %enchantment level of protection of {_tempItem}% / %"{@MaxLvProtection}"% )"
+                            play sound "block.anvil.use" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::featherFalling}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of feather falling of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvFeatherFalling}:
+                            enchant {_tempItem} with "feather falling %{_tempLv} + 1%" parsed as enchantment type
+                            set player's offhand tool to {_tempItem}
+
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&aSuccess! &e&oFeather Falling ( %enchantment level of feather falling of {_tempItem}% / %"{@MaxLvFeatherFalling}"% )"
+                            play sound "block.anvil.use" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::efficiency}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of efficiency of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvEfficiency}:
+                            enchant {_tempItem} with "efficiency %{_tempLv} + 1%" parsed as enchantment type
+                            set player's offhand tool to {_tempItem}
+
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&aSuccess! &e&oEfficiency ( %enchantment level of efficiency of {_tempItem}% / %"{@MaxLvEfficiency}"% )"
+                            play sound "block.anvil.use" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::fortune}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of fortune of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvFortune}:
+                            enchant {_tempItem} with "fortune %{_tempLv} + 1%" parsed as enchantment type
+                            set player's offhand tool to {_tempItem}
+
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&aSuccess! &e&oFortune ( %enchantment level of fortune of {_tempItem}% / %"{@MaxLvFortune}"% )"
+                            play sound "block.anvil.use" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::lure}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of lure of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvLure}:
+                            enchant {_tempItem} with "lure %{_tempLv} + 1%" parsed as enchantment type
+                            set player's offhand tool to {_tempItem}
+
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&aSuccess! &e&oLure ( %enchantment level of lure of {_tempItem}% / %"{@MaxLvLure}"% )"
+                            play sound "block.anvil.use" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::luckOfTheSea}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of luck of the sea of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvLuckOfTheSea}:
+                            enchant {_tempItem} with "luck of the sea %{_tempLv} + 1%" parsed as enchantment type
+                            set player's offhand tool to {_tempItem}
+
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&aSuccess! &e&oLuck Of The Sea ( %enchantment level of luck of the sea of {_tempItem}% / %"{@MaxLvLuckOfTheSea}"% )"
+                            play sound "block.anvil.use" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+
+
+
+                else:
+                    #
+                    if 1 of player's tool is {enchantBooks::sharpness}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of sharpness of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvSharpness}:
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&4Failed!"
+                            play sound "entity.iron_golem.damage" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::smite}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of smite of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvSmite}:
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&4Failed!"
+                            play sound "entity.iron_golem.damage" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::baneOfArthropods}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of bane of arthropods of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvBaneOfArthropods}:
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&4Failed!"
+                            play sound "entity.iron_golem.damage" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::looting}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of looting of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvLooting}:
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&4Failed!"
+                            play sound "entity.iron_golem.damage" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::knockback}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of knockback of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvKnockback}:
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&4Failed!"
+                            play sound "entity.iron_golem.damage" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::power}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of power of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvPower}:
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&4Failed!"
+                            play sound "entity.iron_golem.damage" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::punch}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of punch of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvPunch}:
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&4Failed!"
+                            play sound "entity.iron_golem.damage" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::riptide}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of riptide of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvRiptide}:
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&4Failed!"
+                            play sound "entity.iron_golem.damage" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::quickCharge}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of quick charge of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvQuickCharge}:
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&4Failed!"
+                            play sound "entity.iron_golem.damage" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::unbreaking}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of unbreaking of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvUnbreaking}:
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&4Failed!"
+                            play sound "entity.iron_golem.damage" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::mending}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of mending of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvMending}:
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&4Failed!"
+                            play sound "entity.iron_golem.damage" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::protection}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of protection of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvProtection}:
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&4Failed!"
+                            play sound "entity.iron_golem.damage" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::featherFalling}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of feather falling of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvFeatherFalling}:
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&4Failed!"
+                            play sound "entity.iron_golem.damage" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::efficiency}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of efficiency of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvEfficiency}:
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&4Failed!"
+                            play sound "entity.iron_golem.damage" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::fortune}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of fortune of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvFortune}:
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&4Failed!"
+                            play sound "entity.iron_golem.damage" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::lure}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of lure of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvLure}:
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&4Failed!"
+                            play sound "entity.iron_golem.damage" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+                    #
+                    if 1 of player's tool is {enchantBooks::luckOfTheSea}:
+                        set {_tempItem} to player's offhand tool
+                        set {_tempLv} to enchant level of luck of the sea of {_tempItem}
+
+                        if {_tempLv} is not set:
+                            set {_tempLv} to 0
+
+                        if {_tempLv} < {@MaxLvLuckOfTheSea}:
+                            set {_tempBook} to player's tool
+                            set {_tempBookAmount} to item amount of {_tempBook} - 1
+                            set player's tool to {_tempBookAmount} of {_tempBook}
+
+                            message "&4Failed!"
+                            play sound "entity.iron_golem.damage" with volume 0.6 and pitch 1 for player
+                        else:
+                            message "&cIt's already the highest level."
+                    #
+
+
+
+            else:
+                message "&cToo much targets."
+
+
+
+command /sEnDropAllItems:
+    trigger:
+        if player is op:
+            loop {enchantBooks::*}:
+                drop loop-value at player
+            message "&aDrop all books."
+        else:
+            message "&c&oOP required"
